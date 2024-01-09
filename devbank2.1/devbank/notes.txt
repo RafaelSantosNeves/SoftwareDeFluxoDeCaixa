@@ -1,0 +1,68 @@
+<?php
+      include("../configuration/connection.php");
+
+      
+      $sql = "SELECT valor_entrada, tipo_entrada, data_entrada FROM entrada WHERE ativo = 1;";
+
+ 
+      if (mysqli_num_rows($consulta) > 0){
+
+
+      while ($usuario = mysqli_fetch_assoc($consulta)){
+      ?> 
+
+            <tr>
+            <th scope="row"><?php print($entrada["valor_entrada"]); ?></th>
+            <td><?php print($entrada["tipo_entrada"]); ?></td>
+            <td><?php print($entrada["data_entrada"]); ?></td>
+            </tr>
+      <?php
+         }
+                      
+          //Fecha a conexâo com o BD.
+          mysqli_close($connect);
+
+          }else{
+          //Retorna a mensagem para o usuário.
+          print("Não existem valores cadastrados no banco de dados.");
+
+          //Fecha a conexão com o BD.
+          mysqli_close($connect);
+          }
+      ?>    
+        
+
+
+        receita error:
+
+        <form class="mnReceitaPrincipal" method="post" action="https://sys4soft.com/udemy/forms/index.php">
+    <section class="stnTituloReceita">
+      <h1 class="titulo">RECEITAS</h1>
+    </section>
+    <section class="stnReceitaInput">
+
+      <div class="divAlinhamento">
+        <label class="lbAdiciona" for="">Valor</label>
+        <input name="entrada" type="number" step="0.010" min="0" />
+      </div>
+      <div class="divAlinhamento">
+        <label class="lbAdiciona" for="">Tipo de receita</label><br>
+        <select class="sltTipo" name="tipo_despesa">
+          <option selected>Selecione o tipo de receita</option>
+          <option value="pagamento">Pagamento</option>
+          <option value="Pix">Pix</option>
+          <option value="outros">Outros</option>
+          <!-- <option value="contas">Contas</option>
+          <option value="alimentacao">Alimentação</option>
+          <option value="outros">Outros</option> -->
+        </select>
+      </div>
+      <div class="divAlinhamento">
+        <label class="lbAdiciona" for="">Data</label>
+        <input type="date" name="data_receita" id="dataValor">
+      </div>
+    </section>
+    <div class="enviar">
+          <input name="submit_receita" id="submit" type="submit" class="btn" value="enviar"></input>
+    </div>
+  </form>

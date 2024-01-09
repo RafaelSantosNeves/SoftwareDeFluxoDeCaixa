@@ -1,0 +1,59 @@
+id - int - 10
+nome - vch - 250
+cpf - vch - 15
+data_nascimento - date
+genero - char 1 null 
+cep - vchar - 15
+logradouro vch - 100
+complemento varch - 15 null
+numero_residencia - varchar 10
+bairro - varchar 100
+estado - varchar 100
+numero_celular - varchar 15;
+email - varchar 50
+senha - varchar 100
+ativo int 10 
+
+
+<?php 
+include("../configuration/connection.php");
+
+
+// variaveis que irao receber os dados enviados via post do formulario
+// nome, cpf, email, senha
+$nome = $_POST['nome'];
+$cpf = $_POST['cpf'];
+$email = $_POST['email'];
+$senha = $_POST['senha'];
+
+//instrucao SQL
+$sql = "INSERT INTO usuario(
+    nome,
+    cpf,
+    email,
+    senha,
+    ativo)
+    VALUES(
+        '".$nome."',
+        '".$cpf."',
+        '".$email."',
+        SHA1('".$senha."'),
+    1);";
+    // tentativa de insercao de dados no bd
+    if(mysqli_query($connect, $sql)){
+        //encerra a conexao com o bando de dados
+        mysqli_close($connect);
+
+        header("location: ../login/form-login.php?retorno=" .$retorno);
+        $retorno = "Usuario cadastrado com sucesso"; 
+    }
+    else{
+
+        mysqli_close($connect);
+
+        //redireciona a pagina para o login
+        $retorno = "Não foi possivel cadastrar o usuario";
+        header("location: form-create.php?retorno=" . $retorno);
+    }
+
+?>

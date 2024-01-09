@@ -1,0 +1,326 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+body{
+    width: calc(100%);
+    display: flex;
+    flex-direction: column ;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(146deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(138,212,255,1) 100%);
+    background: -webkit-linear-gradient(146deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(138,212,255,1) 100%);
+    background: linear-gradient(146deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(138,212,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#8ad4ff",GradientType=1);
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    justify-content: space-between;
+}
+
+
+.artDinheiro{
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    font-size: 30px;
+    margin-top: 5px;
+    background-color: #dcdcdc;
+    width: 200px;
+}
+
+.artDinheiroNome{
+    margin-top: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding: 2px;
+    background-color: #dcdcdc;
+    font-size: 30px;
+    padding-left: 20px;
+    width: 200px;
+}
+
+h3{
+    margin-right: 20px;
+}
+
+.rs{
+    margin-right: 10px;
+}
+
+#pDinheiroPositico{
+    color: #4CAF50;
+}
+
+#pDinheiroNevativo{
+    color: red;
+}
+#pDinheiroTotal{
+    color: green;
+}
+
+.stnDinheiro{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.sctBemvindo{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.sctBemvindo buttom{
+    border-radius: 10px;
+    background-color: #164773;
+    color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Nunito Sans', sans-serif;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sctGastos{
+    width: 100%;
+    padding-bottom: 200px;
+}
+
+
+
+#columnchart_material{
+    width: 600px;
+    height: 400px;
+}
+
+
+:root {
+    --menu-size: 250px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #164773;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+}
+
+header i{
+    color: white;
+    font-size: 35px;
+}
+
+header a{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover, i:hover{
+    color:#EB1B84;
+}
+
+
+.content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#btnMenu {
+    margin: 0px;
+    cursor: pointer;
+    padding: 5px;
+    width: 5%;
+    display: flex;   
+}
+
+#logoutmenu{
+   margin-left: 50px;
+
+}
+
+.icon{
+    text-align: center;
+}
+
+.hamburguer{
+    color: #fff;
+    font-size: 35px;
+}
+
+#btnClose {
+    padding: 8px;
+    background-color: rgb(78, 37, 37);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#btnClose:active {
+    background-color: rgb(151, 73, 73);
+}
+
+.menu {
+
+    margin-top: 60px;
+    position: fixed;
+    top: 0;
+    width: var(--menu-size);
+    height: 100%;
+    background-color: #164773;
+}
+
+.menu ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 10px;
+
+
+}
+
+.menu ul li {
+    display: flex;
+    line-height: 60px;
+}
+
+.menu ul li .menu_link {
+    
+    transition: background 0.3s;
+    display: block;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+
+
+.effect {
+    transition: margin 0.8s;
+}
+
+.tabela{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 50px;
+background-color: #164773;
+border-radius: 20px;
+}
+th,tr{
+    color: white;
+}
+
+@media (min-width: 768px) {
+    #btnClose {
+        display: none;
+    }
+    .formulario{
+        padding: 5px;
+    }
+}
+
+/* ##### FORMULÃRIO #### */
+.formulario {
+    padding: 45px;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 3rem;
+    background-color: #164773;
+    box-shadow: 23px 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    border: 2px solid #000;
+}
+input[type=text], input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline-color:#EB1B84 ;
+}
+input[type=submit] {
+    background-color: #EB1B84;
+    color: #fff;
+    align-items: center;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0px 40%;
+    font-family: 'Nunito';
+    font-size: 40px;
+    font-weight: 900;
+    width: 20%;
+}
+
+input[type=submit]:hover {
+    background-color: #ac135f;
+}
+  
+#columnchart_material {
+    background-color: transparent;
+    border: none;
+  }
+  
+
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito' sans-serif;
+    box-sizing: border-box;
+    font-family: 'Nunito' sans-serif;
+}
+
+footer{
+    width: 100%;
+    background-color: #164773;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+
+    height: 100px;
+
+}
+
+.menu-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: white;
+}
+

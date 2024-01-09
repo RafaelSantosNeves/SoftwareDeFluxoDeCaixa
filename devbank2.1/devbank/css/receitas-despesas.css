@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+:root {
+    --menu-size: 250px;
+}
+
+* {
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito' sans-serif;
+}
+
+body{
+    width: calc(100%);
+    display: flex;
+    flex-direction: column ;
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(146deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(138,212,255,1) 100%);
+    background: -webkit-linear-gradient(146deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(138,212,255,1) 100%);
+    background: linear-gradient(146deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 22%, rgba(138,212,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#8ad4ff",GradientType=1);
+    background-attachment: fixed;
+}
+/* ------ header ----- */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #164773;
+    padding: 10px;
+    width: 100%;
+}
+
+header i{
+    color: white;
+    font-size: 35px;
+}
+
+header a{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover, i:hover{
+    color:#EB1B84;
+}
+/* ---- menu ----  */
+
+#btnMenu {
+    margin: none;
+    cursor: pointer;
+    padding: 5px;
+    width: 5%;
+    display: flex;
+   
+}
+
+.icon{
+    text-align: center;
+}
+.hamburguer{
+    color: #fff;
+    font-size: 35px;
+}
+
+#btnClose {
+    padding: 8px;
+    background-color: rgb(78, 37, 37);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#btnClose:active {
+    background-color: rgb(151, 73, 73);
+}
+
+.menu {
+
+    margin-top: 60px;
+    position: fixed;
+    top: 0;
+    width: var(--menu-size);
+    height: 100%;
+    background-color: #164773;
+}
+
+.menu ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 10px;
+
+
+}
+
+.menu ul li {
+    display: flex;
+    line-height: 60px;
+}
+
+.menu ul li .menu_link {
+    
+    transition: background 0.3s;
+    display: block;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+
+
+.effect {
+    transition: margin 0.8s;
+}
+
+@media (min-width: 768px) {
+    #btnClose {
+        display: none;
+    }
+}
+
+/* receitas css */
+
+.mnReceitaPrincipal{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.stnTituloReceita{
+    text-align: center;
+    margin-top: 16px;
+    padding: 10px 20px 10px 20px;
+    background-color: #164773;
+    color: #ffffff;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    width: 220px;
+}
+
+.stnReceitaInput{
+    color: #000;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lbAdiciona{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 30px;
+}
+
+.stnReceitaInput > .enviar{
+    width: 50%;
+    margin-top: 70px;
+    height: 50px;
+}
+.stnReceitaInput > div{
+    margin: 5px;
+}
+input[type="number"]{
+    width: 100px;
+    height: 30px;
+    font-size: larger;
+    margin-top: 20px;
+
+}
+.enviar > button[type="submit"]{
+    width: 100px;
+    font-size: larger;
+    margin: 20px 0px 20px 05px;
+    margin-top: 20px;
+}
+
+.lista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #164773;
+    width: 50%;
+    margin: auto;
+    border-radius: 40px;
+    color: white;
+    padding: 15px;
+}
+table{
+    margin: 5px;
+}
+tr, td{
+    font-size: larger;
+    padding: 15px;
+    margin: 10px;
+}
+
+.divAlinhamento{
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.sltTipo{
+    height: 30px;
+}
+
